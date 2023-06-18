@@ -8,7 +8,7 @@ A script for Roll20 that will create macros from a "#"-separated list of macros 
 ## Bugs
 For some reason, the newly created macros don't work unless you open each one and hit "Save Changes". 
 
-Example "Macros" Handout: 
+## Example "Macros" Handout
 ```
 ################################################################################
 
