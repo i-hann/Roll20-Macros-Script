@@ -22,7 +22,7 @@ on('ready', async function () {
                             for (var i = 0; i < macrosArray.length; i++) {
 
                                 // Save the macro body, adding in newlines
-                                var macroBody = (macrosArray[i].replace(/newline/g, '\n'));
+                                var macroBody = (macrosArray[i].replace(/\$newline/g, '\n'));
 
                                 // Get the macro name
                                 const regexp = /{{name=\s*([^}]*)/i;
