@@ -2,13 +2,15 @@
 A script for Roll20 that will create macros from a "#"-separated list of macros in a Handout. The Handout must be visible only to the player executing the commands (The script uses visibility to determine who the handouts belong to). New lines in the Handout will be lost in translation, so use the string "newline" to indicate where the script should populate newline characters into the macros.
 
 ## Commands
+```
 !delete macros - Deletes all of the messaging player's macros
 !create macros - Creates macros for the messaging player from the text in their "Macros" Handout
+```
 
 ## Bugs
 For some reason, the newly created macros don't work unless you open each one and hit "Save Changes". 
 
-Example "Macros" Handout: 
+## Example "Macros" Handout
 ```
 ################################################################################
 
