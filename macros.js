@@ -8,6 +8,7 @@ on('ready', async function () {
                 // Find the player's 'Macros' Handout
                 var macroHandout = await findObjs({
                     _type: "handout",
+                    name: "Macros",
                     inplayerjournals: msg.playerid
                 });
 
@@ -20,8 +21,8 @@ on('ready', async function () {
                         if ((typeof macrosArray != 'undefined') && (macrosArray.length > 0)) {
                             for (var i = 0; i < macrosArray.length; i++) {
 
-                                // Save the macro body
-                                var macroBody = macrosArray[i];
+                                // Save the macro body, adding in newlines
+                                var macroBody = (macrosArray[i].replace(/newline/g, '\n'));
 
                                 // Get the macro name
                                 const regexp = /{{name=\s*([^}]*)/i;
