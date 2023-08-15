@@ -31,7 +31,7 @@ on('ready', async function () {
                                     var macroName = match[1];
 
                                     // Remove spaces from the macro name
-                                    macroName = macroName.replace(" ", "-");
+                                    macroName = macroName.replace(/ /g, "-");
 
                                     if ((typeof macroName != 'undefined') && (typeof macroBody != 'undefined')) {
                                         // Log
@@ -43,7 +43,7 @@ on('ready', async function () {
                                             _playerid: msg.playerid,
                                             visibleto: msg.playerid,
                                             action: macroBody,
-                                            istokenaction: false
+                                            istokenaction: true
                                         });
                                     }
                                 }
