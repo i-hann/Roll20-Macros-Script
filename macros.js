@@ -17,7 +17,7 @@ on('ready', async function () {
                 const characterId = characterMatches[1];
                 const characterObj = await getObj('character', characterId);
                 const characterName = await characterObj.get('name');
-
+                
                 if (typeof characterName != 'undefined') {
                     if (msg.content.match(/^!create macros/i)) {
 
