@@ -58,9 +58,7 @@ on('ready', async function () {
                                             });
                                             if ((typeof trackerAbilities != 'undefined') && (trackerAbilities.length > 0)) {
                                                 for (var i = 0; i < trackerAbilities.length; i++) {
-                                                    var abilityId = trackerAbilities[i]._id;
-                                                    var abilityObj = await getObj('ability', abilityId);
-                                                    abilityObj.remove();
+                                                    trackerAbilities[i].remove();
                                                 }
                                             }
 
