@@ -83,6 +83,10 @@ on('ready', async function () {
                                             // Remove spaces from the macro name
                                             macroName = macroName.replace(/ /g, "-");
 
+                                            // Remove image links from macro name
+                                            // Ex: Giant Centipede Venom[Giant Centipede Venom](https://2e.aonprd.com/Images/Monsters/Centipede_GiantCentipede.png)
+                                            macroName = macroName.replace(/\s*\[.*?\]\s*\(.*?\)/g, "");
+
                                             if ((typeof macroName != 'undefined') && (typeof macroBody != 'undefined')) {
                                                 // Log
                                                 sendChat("macros.js", "Creating Macro: " + macroName);
